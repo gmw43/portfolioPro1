@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+.bgImg {
+  background-image: url('greenBg.jpg');
+  filter: brightness(50%);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hello {
+  text-align: center;
+}
+.card_inner {
+  max-width: calc(33.3% - 25px);
+  margin: 0 10px;
+}
+.img_div img {
+  max-width: 100%;
+}
+.card_text h1 {
+  font-size: 2.5vw;
+  max-width: 100%;
+}
+.card_text p {
+  font-size: 2vw;
+  max-width: 100%;
+}
+.card {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+nav {
+  /* background-color: lightseagreen; */
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+nav .logo {
+  padding: 4rem;
+  font-size: 2rem;
+  color: white;
+  line-height: 80px;
+}
+
+nav .logo span {
+  color: rgb(60, 174, 212);
+}
+
+ul {
+  float: right;
+  margin: 0 4rem;
+}
+ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 10px;
+}
+ul li i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+ul li i:hover {
+  color: gray;
+}
+
+ul li a {
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 2rem;
+  color: white;
+  float: right;
+  margin-right: 4rem;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 992px) {
+  ul li a {
+    font-size: 1rem;
+  }
+  ul {
+    margin: 0 1rem;
+  }
+  nav .logo {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 855px) {
+  ul li a {
+    font-size: 1rem;
+  }
+  ul {
+    margin: 0 1.5rem;
+  }
+  nav .logo {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+
+  ul li a {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  a:hover {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  ul {
+    width: 100% !important;
+    background-color: lightseagreen;
+    /* height: 100vh; */
+    top: 80px;
+    left: -105%;
+    text-align: center;
+    transition: all 0.5s;
+    position: fixed;
+    margin: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  nav .logo {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------  HERO SECTION   ----------- */
+
+.hero {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.hero_img {
+  background-image: url('phone.png');
+  background-size: contain;
+  height: 60vh;
+  background-repeat: no-repeat;
+}
+
+.hero_content h2 {
+  font-size: 3.5rem;
+}
+.hero_content h2 span {
+  color: rgb(60, 174, 212);
+}
+.hero_content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.hero_btn button {
+  background-color: rgb(60, 174, 212);
+  color: white;
+  padding: 10px 20px;
+  margin: 1rem 0;
+  border: unset;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero_btn button:hover {
+  background-color: rgb(33, 133, 167);
+}
+
+/* ------------  HERO SECTION MEDIA QUERY ----------- */
+
+@media (max-width: 1100px) {
+  .hero {
+    left: 10%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero_content h2 {
+    font-size: 2.8rem;
+  }
+  .hero {
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_content h2 {
+    font-size: 2.5rem;
+  }
+  .hero_content p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 662px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bgImg {
+    height: 150vh;
+  }
+  .hero_img {
+    margin: 2rem 0 0 5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .bgImg {
+    height: 200vh;
+  }
+}
